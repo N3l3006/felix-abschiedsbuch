@@ -1,0 +1,20 @@
+{
+  "name": "Felix' Abschiedsbuch",
+  "short_name": "Felix Buch",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#e8dfd2",
+  "theme_color": "#6a4935",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
