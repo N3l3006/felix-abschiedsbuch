@@ -291,7 +291,16 @@ function download(data,name){
 document.getElementById('saveImage').onclick=async()=>{
  setStatus('Bild wird erstellt …');
  const c=await render();
- download(c.toDataURL('image/jpeg',0.93),'Felix_Abschiedsbuch.jpg');
+ const blob=await new Promise(r=>c.toBlob(r,'image/jpeg',0.93));
+ const file=new File([blob],'Felix_Abschiedsbuch.jpg',{type:'image/jpeg'});
+ if(navigator.canShare && navigator.canShare({files:[file]})){
+   try{
+     await navigator.share({files:[file],title:'Felix Abschiedsbuch'});
+     setStatus('Bild geteilt ✓');
+     return;
+   }catch(e){}
+ }
+ download(URL.createObjectURL(blob),'Felix_Abschiedsbuch.jpg');
  setStatus('Bild gespeichert ✓');
 };
 document.getElementById('printPdf').onclick=async()=>{
