@@ -14,26 +14,39 @@ button{border:0;border-radius:999px;padding:10px 14px;background:#6a4935;color:#
 button.secondary{background:#9a7459}
 .status{text-align:center;padding:7px 12px;font:12px Arial,sans-serif;color:#6b5545;min-height:30px}
 .wrap{display:flex;justify-content:center;padding:10px}
-.page{position:relative;width:min(98vw,827px);aspect-ratio:1191/1684;background:url('background.png?v=6') center/100% 100% no-repeat;box-shadow:0 12px 30px #0002;overflow:hidden}
-.linefield{position:absolute;border:0;outline:0;background:transparent;color:#3f2c21;font-family:Georgia,serif;font-size:clamp(10px,1.45vw,15px);padding:0 3px 1px;margin:0;line-height:1;height:1.78%}
-.linefield:focus{background:rgba(255,255,255,.26)}
-#name{left:27.9%;top:20.35%;width:34.8%}
-#since1{left:21.1%;top:25.94%;width:41.8%}
-#since2{left:21.1%;top:28.14%;width:41.8%}
-#moment1{left:21.1%;top:36.24%;width:41.8%}
-#moment2{left:21.1%;top:38.36%;width:41.8%}
-#moment3{left:21.1%;top:40.47%;width:41.8%}
-#traits1{left:21.1%;top:47.61%;width:50.5%}
-#traits2{left:21.1%;top:49.72%;width:50.5%}
-#traits3{left:21.1%;top:51.83%;width:50.5%}
-#suitcase1{left:21.1%;top:58.37%;width:50.5%}
-#suitcase2{left:21.1%;top:60.48%;width:50.5%}
-#suitcase3{left:21.1%;top:62.59%;width:50.5%}
-#texas1{left:21.1%;top:69.53%;width:54.5%}
-#texas2{left:21.1%;top:71.64%;width:54.5%}
-#wish1{left:21.1%;top:77.25%;width:54.5%}
-#wish2{left:21.1%;top:79.36%;width:54.5%}
-#wish3{left:21.1%;top:81.47%;width:54.5%}
+.page{position:relative;width:min(98vw,827px);aspect-ratio:1191/1684;background:url('background.png?v=8') center/100% 100% no-repeat;box-shadow:0 12px 30px #0002;overflow:hidden}
+.linefield{
+ position:absolute;
+ border:0!important;
+ outline:0;
+ background:transparent!important;
+ color:#3f2c21;
+ font-family:Georgia,"Times New Roman",serif;
+ font-size:clamp(10px,1.45vw,15px);
+ line-height:1;
+ padding:0 3px 2px;
+ margin:0;
+ border-radius:0;
+ z-index:10;
+}
+.linefield:focus{background:rgba(255,255,255,.26)!important}
+#name{left:27.8757%;top:20.4276%;width:34.9286%;height:1.6033%}
+#since1{left:21.0747%;top:27.2565%;width:41.8136%;height:1.6033%}
+#since2{left:21.0747%;top:29.4537%;width:41.8136%;height:1.6033%}
+#moment1{left:21.0747%;top:36.8171%;width:41.8136%;height:1.6033%}
+#moment2{left:21.0747%;top:38.8955%;width:41.8136%;height:1.6033%}
+#moment3{left:21.0747%;top:41.0333%;width:41.8136%;height:1.6033%}
+#traits1{left:21.0747%;top:48.1591%;width:50.5458%;height:1.6033%}
+#traits2{left:21.0747%;top:50.2375%;width:50.5458%;height:1.6033%}
+#traits3{left:21.0747%;top:52.3159%;width:50.5458%;height:1.6033%}
+#suitcase1{left:21.0747%;top:58.9074%;width:50.5458%;height:1.6033%}
+#suitcase2{left:21.0747%;top:60.9857%;width:50.5458%;height:1.6033%}
+#suitcase3{left:21.0747%;top:63.0641%;width:50.5458%;height:1.6033%}
+#texas1{left:21.0747%;top:69.5368%;width:54.4920%;height:1.6033%}
+#texas2{left:21.0747%;top:71.6152%;width:54.4920%;height:1.6033%}
+#wish1{left:21.0747%;top:78.1473%;width:54.4920%;height:1.6033%}
+#wish2{left:21.0747%;top:80.2257%;width:54.4920%;height:1.6033%}
+#wish3{left:21.0747%;top:82.3040%;width:54.4920%;height:1.6033%}
 .photo{position:absolute;overflow:hidden;background:rgba(255,255,255,.08)}
 .photo input{position:absolute;inset:0;width:100%;height:100%;opacity:0;z-index:3;cursor:pointer}
 .photo label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;border:1px dashed rgba(106,73,53,.45);background:rgba(255,255,255,.24);color:#795a43;font:600 clamp(10px,1.25vw,14px) Arial,sans-serif;padding:5px;pointer-events:none;z-index:2}
@@ -58,22 +71,22 @@ button.secondary{background:#9a7459}
 <div class="wrap">
 <main class="page" id="page">
  <input class="linefield" id="name" aria-label="Name">
- <input class="linefield" id="since1" aria-label="Seit wann kennen wir uns, Zeile 1">
- <input class="linefield" id="since2" aria-label="Seit wann kennen wir uns, Zeile 2">
- <input class="linefield" id="moment1" aria-label="Bester gemeinsamer Moment, Zeile 1">
- <input class="linefield" id="moment2" aria-label="Bester gemeinsamer Moment, Zeile 2">
- <input class="linefield" id="moment3" aria-label="Bester gemeinsamer Moment, Zeile 3">
- <input class="linefield" id="traits1" aria-label="Eigenschaften, Zeile 1">
- <input class="linefield" id="traits2" aria-label="Eigenschaften, Zeile 2">
- <input class="linefield" id="traits3" aria-label="Eigenschaften, Zeile 3">
- <input class="linefield" id="suitcase1" aria-label="Koffer, Zeile 1">
- <input class="linefield" id="suitcase2" aria-label="Koffer, Zeile 2">
- <input class="linefield" id="suitcase3" aria-label="Koffer, Zeile 3">
- <input class="linefield" id="texas1" aria-label="Texas erleben, Zeile 1">
- <input class="linefield" id="texas2" aria-label="Texas erleben, Zeile 2">
- <input class="linefield" id="wish1" aria-label="Wunsch, Zeile 1">
- <input class="linefield" id="wish2" aria-label="Wunsch, Zeile 2">
- <input class="linefield" id="wish3" aria-label="Wunsch, Zeile 3">
+ <input class="linefield" id="since1" aria-label="Seit wann kennen wir uns – Zeile 1">
+ <input class="linefield" id="since2" aria-label="Seit wann kennen wir uns – Zeile 2">
+ <input class="linefield" id="moment1" aria-label="Bester gemeinsamer Moment – Zeile 1">
+ <input class="linefield" id="moment2" aria-label="Bester gemeinsamer Moment – Zeile 2">
+ <input class="linefield" id="moment3" aria-label="Bester gemeinsamer Moment – Zeile 3">
+ <input class="linefield" id="traits1" aria-label="Eigenschaften – Zeile 1">
+ <input class="linefield" id="traits2" aria-label="Eigenschaften – Zeile 2">
+ <input class="linefield" id="traits3" aria-label="Eigenschaften – Zeile 3">
+ <input class="linefield" id="suitcase1" aria-label="Koffer – Zeile 1">
+ <input class="linefield" id="suitcase2" aria-label="Koffer – Zeile 2">
+ <input class="linefield" id="suitcase3" aria-label="Koffer – Zeile 3">
+ <input class="linefield" id="texas1" aria-label="Texas – Zeile 1">
+ <input class="linefield" id="texas2" aria-label="Texas – Zeile 2">
+ <input class="linefield" id="wish1" aria-label="Wunsch – Zeile 1">
+ <input class="linefield" id="wish2" aria-label="Wunsch – Zeile 2">
+ <input class="linefield" id="wish3" aria-label="Wunsch – Zeile 3">
 
  <div class="photo" id="photo1"><input type="file" id="file1" accept="image/*,.heic,.heif"><label>Foto hinzufügen</label><img alt=""></div>
  <div class="photo" id="photo2"><input type="file" id="file2" accept="image/*,.heic,.heif"><label>Foto hinzufügen</label><img alt=""></div>
@@ -83,10 +96,10 @@ button.secondary{background:#9a7459}
 </main>
 </div>
 <div class="help">iPhone und Android: Fotofeld antippen, Bild auswählen und kurz warten. HEIC-Fotos vom iPhone werden automatisch umgewandelt.</div>
-<div class="version">Version Mobile Fix 6 – Start auf erster Linie</div>
+<div class="version">Version Mobile Fix 8 – erste Linie exakt</div>
 
 <script>
-const textIds=['name','since1','since2','moment1','moment2','moment3','traits1','traits2','traits3','suitcase1','suitcase2','suitcase3','texas1','texas2','wish1','wish2','wish3'];
+const textIds=["name", "since1", "since2", "moment1", "moment2", "moment3", "traits1", "traits2", "traits3", "suitcase1", "suitcase2", "suitcase3", "texas1", "texas2", "wish1", "wish2", "wish3"];
 const photoIds=['1','2','3','4','5'];
 const TEXT_KEY='felix_text_mobile_fix4';
 const DB_NAME='felix_mobile_fix4';
@@ -242,24 +255,17 @@ async function render(){
  const canvas=document.createElement('canvas');
  canvas.width=1191;canvas.height=1684;
  const ctx=canvas.getContext('2d');
- const bg=await loadImg('background.png?v=6');
+ const bg=await loadImg('background.png?v=8');
  ctx.drawImage(bg,0,0,1191,1684);
  ctx.fillStyle='#3f2c21';
  ctx.font='22px Georgia';
  ctx.textBaseline='top';
 
- const lineBoxes={
-   name:[332,371,416],
-   since1:[251,486,498],since2:[252,523,497],
-   moment1:[251,646,498],moment2:[251,682,498],moment3:[251,717,498],
-   traits1:[252,837,601],traits2:[251,873,602],traits3:[251,908,602],
-   suitcase1:[251,1018,602],suitcase2:[251,1053,602],suitcase3:[251,1088,602],
-   texas1:[252,1198,647],texas2:[251,1232,649],
-   wish1:[251,1342,649],wish2:[252,1378,648],wish3:[251,1413,648]
- };
+ const lineBoxes={"name": [332, 371, 416], "since1": [251, 486, 498], "since2": [251, 523, 498], "moment1": [251, 647, 498], "moment2": [251, 682, 498], "moment3": [251, 718, 498], "traits1": [251, 838, 602], "traits2": [251, 873, 602], "traits3": [251, 908, 602], "suitcase1": [251, 1019, 602], "suitcase2": [251, 1054, 602], "suitcase3": [251, 1089, 602], "texas1": [251, 1198, 649], "texas2": [251, 1233, 649], "wish1": [251, 1343, 649], "wish2": [251, 1378, 649], "wish3": [251, 1413, 649]};
  for(const id of textIds){
-   const b=lineBoxes[id],v=document.getElementById(id).value;
-   if(v)ctx.fillText(v,b[0]+4,b[1]-25,b[2]-8);
+   const b=lineBoxes[id];
+   const value=document.getElementById(id).value;
+   if(value)ctx.fillText(value,b[0]+4,b[1]-25,b[2]-8);
  }
 
  const pboxes={1:[792,343,245,208],2:[792,582,245,208],3:[290,1444,190,190],4:[480,1444,190,190],5:[670,1444,190,190]};
