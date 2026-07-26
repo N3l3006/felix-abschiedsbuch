@@ -14,26 +14,26 @@ button{border:0;border-radius:999px;padding:10px 14px;background:#6a4935;color:#
 button.secondary{background:#9a7459}
 .status{text-align:center;padding:7px 12px;font:12px Arial,sans-serif;color:#6b5545;min-height:30px}
 .wrap{display:flex;justify-content:center;padding:10px}
-.page{position:relative;width:min(98vw,827px);aspect-ratio:1191/1684;background:url('background.png?v=5') center/100% 100% no-repeat;box-shadow:0 12px 30px #0002;overflow:hidden}
+.page{position:relative;width:min(98vw,827px);aspect-ratio:1191/1684;background:url('background.png?v=6') center/100% 100% no-repeat;box-shadow:0 12px 30px #0002;overflow:hidden}
 .linefield{position:absolute;border:0;outline:0;background:transparent;color:#3f2c21;font-family:Georgia,serif;font-size:clamp(10px,1.45vw,15px);padding:0 3px 1px;margin:0;line-height:1;height:1.78%}
 .linefield:focus{background:rgba(255,255,255,.26)}
 #name{left:27.9%;top:20.35%;width:34.8%}
-#since1{left:21.1%;top:28.05%;width:41.8%}
-#since2{left:21.1%;top:30.25%;width:41.8%}
-#moment1{left:21.1%;top:38.35%;width:41.8%}
-#moment2{left:21.1%;top:40.47%;width:41.8%}
-#moment3{left:21.1%;top:42.58%;width:41.8%}
-#traits1{left:21.1%;top:49.72%;width:50.5%}
-#traits2{left:21.1%;top:51.83%;width:50.5%}
-#traits3{left:21.1%;top:53.94%;width:50.5%}
-#suitcase1{left:21.1%;top:60.48%;width:50.5%}
-#suitcase2{left:21.1%;top:62.59%;width:50.5%}
-#suitcase3{left:21.1%;top:64.70%;width:50.5%}
-#texas1{left:21.1%;top:71.64%;width:54.5%}
-#texas2{left:21.1%;top:73.75%;width:54.5%}
-#wish1{left:21.1%;top:79.36%;width:54.5%}
-#wish2{left:21.1%;top:81.47%;width:54.5%}
-#wish3{left:21.1%;top:83.58%;width:54.5%}
+#since1{left:21.1%;top:25.94%;width:41.8%}
+#since2{left:21.1%;top:28.14%;width:41.8%}
+#moment1{left:21.1%;top:36.24%;width:41.8%}
+#moment2{left:21.1%;top:38.36%;width:41.8%}
+#moment3{left:21.1%;top:40.47%;width:41.8%}
+#traits1{left:21.1%;top:47.61%;width:50.5%}
+#traits2{left:21.1%;top:49.72%;width:50.5%}
+#traits3{left:21.1%;top:51.83%;width:50.5%}
+#suitcase1{left:21.1%;top:58.37%;width:50.5%}
+#suitcase2{left:21.1%;top:60.48%;width:50.5%}
+#suitcase3{left:21.1%;top:62.59%;width:50.5%}
+#texas1{left:21.1%;top:69.53%;width:54.5%}
+#texas2{left:21.1%;top:71.64%;width:54.5%}
+#wish1{left:21.1%;top:77.25%;width:54.5%}
+#wish2{left:21.1%;top:79.36%;width:54.5%}
+#wish3{left:21.1%;top:81.47%;width:54.5%}
 .photo{position:absolute;overflow:hidden;background:rgba(255,255,255,.08)}
 .photo input{position:absolute;inset:0;width:100%;height:100%;opacity:0;z-index:3;cursor:pointer}
 .photo label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;border:1px dashed rgba(106,73,53,.45);background:rgba(255,255,255,.24);color:#795a43;font:600 clamp(10px,1.25vw,14px) Arial,sans-serif;padding:5px;pointer-events:none;z-index:2}
@@ -83,7 +83,7 @@ button.secondary{background:#9a7459}
 </main>
 </div>
 <div class="help">iPhone und Android: Fotofeld antippen, Bild auswählen und kurz warten. HEIC-Fotos vom iPhone werden automatisch umgewandelt.</div>
-<div class="version">Version Mobile Fix 5 – Text exakt auf Linien</div>
+<div class="version">Version Mobile Fix 6 – Start auf erster Linie</div>
 
 <script>
 const textIds=['name','since1','since2','moment1','moment2','moment3','traits1','traits2','traits3','suitcase1','suitcase2','suitcase3','texas1','texas2','wish1','wish2','wish3'];
@@ -242,7 +242,7 @@ async function render(){
  const canvas=document.createElement('canvas');
  canvas.width=1191;canvas.height=1684;
  const ctx=canvas.getContext('2d');
- const bg=await loadImg('background.png?v=5');
+ const bg=await loadImg('background.png?v=6');
  ctx.drawImage(bg,0,0,1191,1684);
  ctx.fillStyle='#3f2c21';
  ctx.font='22px Georgia';
