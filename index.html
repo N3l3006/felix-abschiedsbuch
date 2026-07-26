@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#6a4935">
 <title>Felix' Abschiedsbuch – Mobile Fix</title>
 <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 <style>
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;min-height:100%;background:#e8dfd2;color:#4b3325;font-family:Georgia,"Times New Roman",serif}
@@ -304,13 +305,33 @@ document.getElementById('saveImage').onclick=async()=>{
  setStatus('Bild gespeichert ✓');
 };
 document.getElementById('printPdf').onclick=async()=>{
- setStatus('PDF wird vorbereitet …');
- const c=await render();
- const data=c.toDataURL('image/jpeg',0.94);
- const w=window.open('','_blank');
- if(!w){alert('Bitte Pop-ups erlauben.');return}
- w.document.write('<!doctype html><meta name="viewport" content="width=device-width"><style>@page{size:A4;margin:0}html,body{margin:0}img{width:100%;display:block}</style><img src="'+data+'" onload="setTimeout(()=>window.print(),500)">');
- w.document.close();
+ setStatus('PDF wird erstellt …');
+ try{
+   const c=await render();
+   const imgData=c.toDataURL('image/jpeg',0.94);
+   const { jsPDF }=window.jspdf;
+   const pdf=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
+   pdf.addImage(imgData,'JPEG',0,0,210,297);
+   const blob=pdf.output('blob');
+   const file=new File([blob],'Felix_Abschiedsbuch.pdf',{type:'application/pdf'});
+
+   if(navigator.canShare && navigator.canShare({files:[file]})){
+     try{
+       await navigator.share({files:[file],title:'Felix Abschiedsbuch'});
+       setStatus('PDF geteilt ✓');
+       return;
+     }catch(e){}
+   }
+
+   const url=URL.createObjectURL(blob);
+   download(url,'Felix_Abschiedsbuch.pdf');
+   setTimeout(()=>URL.revokeObjectURL(url),1500);
+   setStatus('PDF gespeichert ✓');
+ }catch(err){
+   console.error(err);
+   alert('Die PDF konnte nicht erstellt werden. Bitte versuche stattdessen „Als Bild speichern“.');
+   setStatus('PDF-Fehler');
+ }
 };
 document.getElementById('clearAll').onclick=async()=>{
  if(!confirm('Wirklich alles löschen?'))return;
