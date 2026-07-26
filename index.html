@@ -14,16 +14,26 @@ button{border:0;border-radius:999px;padding:10px 14px;background:#6a4935;color:#
 button.secondary{background:#9a7459}
 .status{text-align:center;padding:7px 12px;font:12px Arial,sans-serif;color:#6b5545;min-height:30px}
 .wrap{display:flex;justify-content:center;padding:10px}
-.page{position:relative;width:min(98vw,827px);aspect-ratio:1191/1684;background:url('background.png?v=4') center/100% 100% no-repeat;box-shadow:0 12px 30px #0002;overflow:hidden}
-.field{position:absolute;border:0;outline:0;background:transparent;color:#3f2c21;font-family:Georgia,serif;font-size:clamp(11px,1.5vw,16px);line-height:1.35;padding:0 3px;resize:none;overflow:hidden}
-.field:focus{background:rgba(255,255,255,.26)}
-#name{left:27.9%;top:20.2%;width:34.8%;height:2.4%}
-#since{left:21.1%;top:28.0%;width:41.8%;height:5.4%}
-#moment{left:21.1%;top:38.4%;width:41.8%;height:7.0%}
-#traits{left:21.1%;top:49.8%;width:50.5%;height:7.1%}
-#suitcase{left:21.1%;top:60.6%;width:50.5%;height:7.1%}
-#texas{left:21.1%;top:71.8%;width:54.5%;height:5.4%}
-#wish{left:21.1%;top:79.0%;width:54.5%;height:7.7%}
+.page{position:relative;width:min(98vw,827px);aspect-ratio:1191/1684;background:url('background.png?v=5') center/100% 100% no-repeat;box-shadow:0 12px 30px #0002;overflow:hidden}
+.linefield{position:absolute;border:0;outline:0;background:transparent;color:#3f2c21;font-family:Georgia,serif;font-size:clamp(10px,1.45vw,15px);padding:0 3px 1px;margin:0;line-height:1;height:1.78%}
+.linefield:focus{background:rgba(255,255,255,.26)}
+#name{left:27.9%;top:20.35%;width:34.8%}
+#since1{left:21.1%;top:28.05%;width:41.8%}
+#since2{left:21.1%;top:30.25%;width:41.8%}
+#moment1{left:21.1%;top:38.35%;width:41.8%}
+#moment2{left:21.1%;top:40.47%;width:41.8%}
+#moment3{left:21.1%;top:42.58%;width:41.8%}
+#traits1{left:21.1%;top:49.72%;width:50.5%}
+#traits2{left:21.1%;top:51.83%;width:50.5%}
+#traits3{left:21.1%;top:53.94%;width:50.5%}
+#suitcase1{left:21.1%;top:60.48%;width:50.5%}
+#suitcase2{left:21.1%;top:62.59%;width:50.5%}
+#suitcase3{left:21.1%;top:64.70%;width:50.5%}
+#texas1{left:21.1%;top:71.64%;width:54.5%}
+#texas2{left:21.1%;top:73.75%;width:54.5%}
+#wish1{left:21.1%;top:79.36%;width:54.5%}
+#wish2{left:21.1%;top:81.47%;width:54.5%}
+#wish3{left:21.1%;top:83.58%;width:54.5%}
 .photo{position:absolute;overflow:hidden;background:rgba(255,255,255,.08)}
 .photo input{position:absolute;inset:0;width:100%;height:100%;opacity:0;z-index:3;cursor:pointer}
 .photo label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;border:1px dashed rgba(106,73,53,.45);background:rgba(255,255,255,.24);color:#795a43;font:600 clamp(10px,1.25vw,14px) Arial,sans-serif;padding:5px;pointer-events:none;z-index:2}
@@ -35,7 +45,7 @@ button.secondary{background:#9a7459}
 #photo5{left:56.3%;top:85.8%;width:15.95%;height:11.25%}
 .help{max-width:850px;margin:0 auto 16px;padding:0 14px;font:13px/1.45 Arial,sans-serif;color:#6b5545;text-align:center}
 .version{font:11px Arial,sans-serif;text-align:center;color:#8d7666;padding-bottom:8px}
-@media(max-width:600px){.toolbar button{font-size:11px;padding:9px 11px}.field{font-size:11px}.status,.help{font-size:11px}}
+@media(max-width:600px){.toolbar button{font-size:11px;padding:9px 11px}.linefield{font-size:11px}.status,.help{font-size:11px}}
 </style>
 </head>
 <body>
@@ -47,13 +57,23 @@ button.secondary{background:#9a7459}
 <div class="status" id="status">Bereit. Tippe auf ein Fotofeld.</div>
 <div class="wrap">
 <main class="page" id="page">
- <input class="field" id="name" aria-label="Name">
- <textarea class="field" id="since" aria-label="Seit wann kennen wir uns"></textarea>
- <textarea class="field" id="moment" aria-label="Bester gemeinsamer Moment"></textarea>
- <textarea class="field" id="traits" aria-label="Eigenschaften"></textarea>
- <textarea class="field" id="suitcase" aria-label="Koffer"></textarea>
- <textarea class="field" id="texas" aria-label="Texas erleben"></textarea>
- <textarea class="field" id="wish" aria-label="Wunsch"></textarea>
+ <input class="linefield" id="name" aria-label="Name">
+ <input class="linefield" id="since1" aria-label="Seit wann kennen wir uns, Zeile 1">
+ <input class="linefield" id="since2" aria-label="Seit wann kennen wir uns, Zeile 2">
+ <input class="linefield" id="moment1" aria-label="Bester gemeinsamer Moment, Zeile 1">
+ <input class="linefield" id="moment2" aria-label="Bester gemeinsamer Moment, Zeile 2">
+ <input class="linefield" id="moment3" aria-label="Bester gemeinsamer Moment, Zeile 3">
+ <input class="linefield" id="traits1" aria-label="Eigenschaften, Zeile 1">
+ <input class="linefield" id="traits2" aria-label="Eigenschaften, Zeile 2">
+ <input class="linefield" id="traits3" aria-label="Eigenschaften, Zeile 3">
+ <input class="linefield" id="suitcase1" aria-label="Koffer, Zeile 1">
+ <input class="linefield" id="suitcase2" aria-label="Koffer, Zeile 2">
+ <input class="linefield" id="suitcase3" aria-label="Koffer, Zeile 3">
+ <input class="linefield" id="texas1" aria-label="Texas erleben, Zeile 1">
+ <input class="linefield" id="texas2" aria-label="Texas erleben, Zeile 2">
+ <input class="linefield" id="wish1" aria-label="Wunsch, Zeile 1">
+ <input class="linefield" id="wish2" aria-label="Wunsch, Zeile 2">
+ <input class="linefield" id="wish3" aria-label="Wunsch, Zeile 3">
 
  <div class="photo" id="photo1"><input type="file" id="file1" accept="image/*,.heic,.heif"><label>Foto hinzufügen</label><img alt=""></div>
  <div class="photo" id="photo2"><input type="file" id="file2" accept="image/*,.heic,.heif"><label>Foto hinzufügen</label><img alt=""></div>
@@ -63,10 +83,10 @@ button.secondary{background:#9a7459}
 </main>
 </div>
 <div class="help">iPhone und Android: Fotofeld antippen, Bild auswählen und kurz warten. HEIC-Fotos vom iPhone werden automatisch umgewandelt.</div>
-<div class="version">Version Mobile Fix 4</div>
+<div class="version">Version Mobile Fix 5 – Text exakt auf Linien</div>
 
 <script>
-const textIds=['name','since','moment','traits','suitcase','texas','wish'];
+const textIds=['name','since1','since2','moment1','moment2','moment3','traits1','traits2','traits3','suitcase1','suitcase2','suitcase3','texas1','texas2','wish1','wish2','wish3'];
 const photoIds=['1','2','3','4','5'];
 const TEXT_KEY='felix_text_mobile_fix4';
 const DB_NAME='felix_mobile_fix4';
@@ -222,28 +242,24 @@ async function render(){
  const canvas=document.createElement('canvas');
  canvas.width=1191;canvas.height=1684;
  const ctx=canvas.getContext('2d');
- const bg=await loadImg('background.png?v=4');
+ const bg=await loadImg('background.png?v=5');
  ctx.drawImage(bg,0,0,1191,1684);
  ctx.fillStyle='#3f2c21';
  ctx.font='22px Georgia';
  ctx.textBaseline='top';
 
- const boxes={name:[332,340,416,40],since:[251,458,498,85],moment:[251,620,498,115],traits:[251,820,602,120],suitcase:[251,1000,602,120],texas:[251,1180,649,90],wish:[251,1330,649,125]};
- function wrap(text,x,y,w,h){
-   const words=(text||'').split(/\s+/);
-   let line='',lines=[];
-   for(const word of words){
-     const test=line?line+' '+word:word;
-     if(ctx.measureText(test).width>w&&line){lines.push(line);line=word}else line=test;
-   }
-   if(line)lines.push(line);
-   lines.slice(0,Math.floor(h/31)).forEach((l,i)=>ctx.fillText(l,x,y+i*31));
- }
+ const lineBoxes={
+   name:[332,371,416],
+   since1:[251,486,498],since2:[252,523,497],
+   moment1:[251,646,498],moment2:[251,682,498],moment3:[251,717,498],
+   traits1:[252,837,601],traits2:[251,873,602],traits3:[251,908,602],
+   suitcase1:[251,1018,602],suitcase2:[251,1053,602],suitcase3:[251,1088,602],
+   texas1:[252,1198,647],texas2:[251,1232,649],
+   wish1:[251,1342,649],wish2:[252,1378,648],wish3:[251,1413,648]
+ };
  for(const id of textIds){
-   const b=boxes[id],v=document.getElementById(id).value;
-   if(!v)continue;
-   if(id==='name')ctx.fillText(v,b[0],b[1]);
-   else wrap(v,b[0],b[1],b[2],b[3]);
+   const b=lineBoxes[id],v=document.getElementById(id).value;
+   if(v)ctx.fillText(v,b[0]+4,b[1]-25,b[2]-8);
  }
 
  const pboxes={1:[792,343,245,208],2:[792,582,245,208],3:[290,1444,190,190],4:[480,1444,190,190],5:[670,1444,190,190]};
